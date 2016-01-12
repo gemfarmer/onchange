@@ -13,9 +13,6 @@ module.exports = function (matches, command, args, verbose) {
   var watching = 'watching ' + matches.join(', ')
   log('onchange ' + watching)
 
-  // Ignore node_modules folders, as they eat CPU like crazy
-  matches.push('!**/node_modules/**')
-
   // Convert arguments to templates
   var tmpls = args.map(tmpl)
 
